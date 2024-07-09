@@ -1,6 +1,6 @@
 # MusicPlayer
 
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/Preview.png?raw=true)
+![image](https://github.com/KyleNeff/MusicPlayer/assets/82414400/d824cfeb-b68a-4cb2-acd5-ffdf60ffe207)
 
 This full stack project focuses on creating a Spotify-like music player that generates a recommendation playlist based on the user's music preferences. The backend uses SQL to store all the songs, while the frontend is built with HTML and JavaScript. The music recommendation system is developed in Python and connected to the frontend using Flask.
 
