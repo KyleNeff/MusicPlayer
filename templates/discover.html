@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{% block title %} Your Top Songs {% endblock %}</h1>
+<body onload="callRecSong()">
+    <div class = "searchContent">
+        <table id="resultsTable"></table>
+    </div>
+</body>
+{% endblock %}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <script src="../static/js/main.js" defer></script>
+    <title>Music Player</title>
+  </head>
+  <body>
+    <div class="container">
+        <aside class = "sidebar">
+            <div class="logo">
+                <i class='bx bx-headphone'></i>
+                <a href="{{ url_for('index') }}">Kyle Neff</a>
+            </div>
+            <div class = "menu">
+                <h5> Menu</h5>
+                <ul>
+                    <li>
+                        <i class='bx bxs-compass' ></i>
+                        <a href="#">Explore</a>
+                    </li>
+                    <li>
+                        <i class='bx bxs-volume-full' ></i>
+                        <a href="#">Genres</a>
+                    </li>
+                    <li>
+                        <i class='bx bxs-microphone' ></i>
+                        <a href="#">Artists</a>
+                    </li>
+                    <li>
+                        <i class='bx bx-podcast' ></i>
+                        <a href="#">Podcasts</a>
+                    </li>
+                </ul>
+            </div>
+            <div class = "menu">
+                <h5> Library &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <i class='bx bx-plus-circle'></i>
+                </h5>
+                <ul>
+                    <li>
+                        <i class='bx bxs-heart'></i>
+                        <a href="{{ url_for('likedSongs') }}">Liked Songs</a>
+                    </li>
+                    <li>
+                        <i class='bx bx-play-circle' ></i>
+                        <a href="{{ url_for('playlist2023') }}">2023 Playlist</a>
+                    </li>
+                    <li>
+                        <i class='bx bx-play-circle' ></i>
+                        <a href="#">2024 Playlist</a>
+                    </li>
+                </ul>
+            </div>
+
+        </aside>
+
+        <main>
+            <header>
+                <div class="nav-links">
+                    <a href="{{ url_for('discover') }}">Discover Music</a>
+                </div>
+
+                <div class="search">
+                    <form action="{{ url_for('search') }}" method="GET">
+                    <div class="searchInfo">
+                        <i class='bx bx-search'></i>
+                        <input type="search" id="searchSong" name="searchSong" placeholder="Type here to search">
+                    </div>
+                    </form>
+                    
+                </div>
+            </header>
+            <div class="content">
+                {% block content %} {% endblock %}
+        
+            </div> 
+
+        </main>
+
+        <div class="right-section">
+
+
+            <div class="music-player">
+                <div class="top-section">
+                    <div class="header">
+                        <h5> Player</h5>
+                        <i class="bx bxs-playlist"></i>
+                    </div>
+                    <div class="song-info">
+                        <img src="{{ url_for('static', filename='images/trend.png') }}">
+                        <div class="description">
+                            <h3>Ripple Echoes</h3>
+                            <h5>Kael Fischer</h5>
+                            <p>2024 Playlist</p>
+                        </div>
+                        <div class="progress">
+                            <p>02:45</p>
+                            <div class="active-line"></div>
+                            <div class="deactive-line"></div>
+                            <p>01:02</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="player-actions">
+                    <div class="buttons">
+                        <i class="bx bx-repeat"></i>
+                        <i class="bx bx-first-page"></i>
+                        <i class='bx bxs-right-arrow
+                        play-button'></i>
+                        <i class="bx bx-last-page"></i>
+                        <i class="bx bx-transfer-alt"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <scrip type="py" src="./test.py" config="./pyscript.json"></scrip>
+  </body>
+</html>
+
+
+

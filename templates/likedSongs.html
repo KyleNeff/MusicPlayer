@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Liked Songs {% endblock %}</h1>
+    <div class = "playlistRecContent">
+        {% for comment in comments %}
+            <p> <i class='bx bxs-music'></i>{{ comment[1] }}</p>
+        {% endfor %}
+    </div>
+{% endblock %}

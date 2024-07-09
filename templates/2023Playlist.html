@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} 2023 Playlist {% endblock %}</h1>
+    <div class="buttons">
+        <form onsubmit="submitForm(event, 'recommendPlaylist')">
+            <input type="submit" value="Recommend Songs">
+        </form>
+    </div>
+    <div class = "playlistRecContent">
+    <table id="resultsTable"></table>
+        {% for comment in comments %}
+            <p> {{ comment[1] }}</p>
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Results {% endblock %}</h1>
+    <div class = "searchContent">
+        {% for comment in comments %}
+            <p><i class='bx bxs-music'></i>{{ comment[0] }}</p>
+        {% endfor %}
+    </div>
+
+
+    <div class="playlist">
+        <div class="genres">
+            <div class="header">
+                <h5>Genres</h5>
+                <a href="#">See all</a>
+            </div>
+
+            <div class="items">
+                <div class="item">
+                    <p>Electro<br>Pop</p>
+                </div>
+                <div class="item">
+                    <p>Dance<br>Rhythm</p>
+                </div>
+                <div class="item">
+                    <p>Club<br>Remix</p>
+                </div>
+                <div class="item">
+                    <p>Hip Hop<br>Rap</p>
+                </div>
+                <div class="item">
+                    <p>Alternative<br>Indie</p>
+                </div>
+                <div class="item">
+                    <p>Classical<br>Period</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="music-list">
+            <div class="header">
+                <h5>Top Songs</h5>
+                <a href="#">See all</a>
+            </div>
+
+            <div class="items">
+                <div class="item">
+                    <div class="info">
+                        <p>01</p>
+                        <img src="{{ url_for('static', filename='images/song-1.png') }}">
+                        <div class="details">
+                            <h5>Sunrise</h5>
+                            <p>Lila Rivera</p>
+                        </div>
+                    </div>
+
+                    <div class="actions">
+                        <p> 03:45</p>
+                        <div class="icon">
+                            <i class="bx bxs-right-arrow"></i>
+                        </div>
+                        <i class="bx bxs-plus-square"></i>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="info">
+                        <p>02</p>
+                        <img src="{{ url_for('static', filename='images/song-2.png') }}">
+                        <div class="details">
+                            <h5>Voyage</h5>
+                            <p>Tyde Brennan</p>
+                        </div>
+                    </div>
+
+                    <div class="actions">
+                        <p> 04:35</p>
+                        <div class="icon">
+                            <i class="bx bxs-right-arrow"></i>
+                        </div>
+                        <i class="bx bxs-plus-square"></i>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="info">
+                        <p>03</p>
+                        <img src="{{ url_for('static', filename='images/song-3.png') }}">
+                        <div class="details">
+                            <h5>Breeze</h5>
+                            <p>Sola Kim</p>
+                        </div>
+                    </div>
+
+                    <div class="actions">
+                        <p> 04:22</p>
+                        <div class="icon">
+                            <i class="bx bxs-right-arrow"></i>
+                        </div>
+                        <i class="bx bxs-plus-square"></i>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="info">
+                        <p>04</p>
+                        <img src="{{ url_for('static', filename='images/song-4.png') }}">
+                        <div class="details">
+                            <h5>Twilight</h5>
+                            <p>Jett Lawsonn</p>
+                        </div>
+                    </div>
+
+                    <div class="actions">
+                        <p> 03:17</p>
+                        <div class="icon">
+                            <i class="bx bxs-right-arrow"></i>
+                        </div>
+                        <i class="bx bxs-plus-square"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock %}
