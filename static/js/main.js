@@ -33,7 +33,7 @@ async function submitForm(event, formType) {
             break;
         default:
             url = `${baseUrl}/`;
-            method = 'GET'; // or GET, depending on your default action
+            method = 'GET';
             break;
     }
 
